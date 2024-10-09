@@ -46,15 +46,27 @@ int main() {
 			
 			if (achar == 'N' && !ifs.eof() && !ifs.fail()) {
 				ifs.get(achar);
-			} 
+			 
 				if (achar == '#' && !ifs.eof() && !ifs.fail()) {
 					ofs << person;
 				}
 				else {
 					ofs << '#N' << achar;
 				}
-
+			
+			}	
+			
+			else {
+			
+				ofs << '#' << achar;
+			}
+		
+			
 		}//if
+		else {
+			ofs << achar;
+		
+		}
 	} //while 
 
 	ifs.close();
